@@ -2,8 +2,26 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.RGBApp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/teal</item>
     </style>
 
     <style name="Theme.RGBApp" parent="Base.Theme.RGBApp" />
+
+    <style name="title_style" parent="@style/TextAppearance.MaterialComponents.Headline5">
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">60dp</item>
+    </style>
+
+    <style name="description_style" parent="@style/TextAppearance.MaterialComponents.Body2">
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">40dp</item>
+    </style>
+
+    <style name="text_input_style" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_margin">8dp</item>
+    </style>
+
+
 </resources>

@@ -27,11 +27,16 @@ class MainActivity : AppCompatActivity() {
 
             // check that the input fields are not empty
             if (redChannel.isNotEmpty() && greenChannel.isNotEmpty() && blueChannel.isNotEmpty()) {
+                // combine the values to a hex code string
                 val hexColor = "#$redChannel$greenChannel$blueChannel"
+                // parse the hex code to int because setBackgroundColor only accepts integers
                 val intColor = Color.parseColor(hexColor)
+                // show the 'created color display' text
                 createdRGBDisplay?.text = "${getString(R.string.created_color_display)} $hexColor"
+                // set the background color
                 createdRGBDisplay.setBackgroundColor(intColor)
             }
+            // show floating error message if no values input
             else {
                 Toast.makeText(this, getString(R.string.please_input_correctly), Toast.LENGTH_LONG).apply {
                     setGravity(Gravity.CENTER, 0, 0)
